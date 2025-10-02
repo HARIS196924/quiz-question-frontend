@@ -1,16 +1,19 @@
 {
+  "homepage": "https://yourusername.github.io/quiz-question-frontend",
   "name": "quiz-app",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
     "axios": "^1.11.0",
+    "http-proxy-middleware": "^2.0.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.1",
-    "react-scripts": "5.0.1",
-    "http-proxy-middleware": "^2.0.6"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
+     "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -38,5 +41,8 @@
     "transformIgnorePatterns": [
       "node_modules/(?!axios)/"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
